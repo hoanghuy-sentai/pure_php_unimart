@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteRule ^trang-chu.html$ ?mod=client&controller=index&action=index
+RewriteRule ^san-pham.html$ ?mod=client&controller=ClientListProducts&action=list_products
+RewriteRule ^blog.html ?mod=client&controller=ClientListPostByCatId&action=listPostByCatId
+RewriteRule ^gioi-thieu-([0-9]+).html$ ?mod=client&controller=ClientIntroduce&action=show_introduce&id=$1
+RewriteRule ^lien-he-([0-9]+).html$ ?mod=client&controller=ClientIntroduce&action=show_introduce&id=1
+RewriteRule ^gio-hang.html$  ?mod=client&controller=ClientCart&action=show_cart
+RewriteRule ^thanh-toan.html$ ?mod=client&controller=ClientPayment&action=show_payment_page
+RewriteRule ^tim-kiem.html$ ?mod=client&controller=ClientCusSearching&action=show_search_rs
+RewriteRule ^san-pham/danh-muc-([0-9]+).html$ ?mod=client&controller=ClientListProductByCatId&action=listProductByCatId&id=$1
+RewriteRule ^sp/danh-muc-([0-9]+)-([0-9]+).html$ ?mod=client&controller=ClientListProductByCatId&action=listProductByCatId&page=$1&id=$2
+RewriteRule ^san-pham/chi-tiet-sp-([0-9]+).html$ ?mod=client&controller=ClientProductDetail&action=listProductByCatId&id=$1
+RewriteRule ^sap-xep-([0-9]+).html$ ?mod=client&controller=ClientListProductByCatId&action=listProductByCatId&id=$1
+RewriteRule ^loc-gia-([0-9]+).html$ ?mod=client&controller=ClientListProductByCatId&action=listProductByCatId&id=1
+RewriteRule danh-muc-bai-viet-([0-9]+).html$ ?mod=client&controller=ClientListPostByCatId&action=listPostByCatId&id=$1
+RewriteRule ^bai-viet/chi-tiet-bai-viet-([0-9]+).html$ ?mod=client&controller=ClientPostDetail&action=postDetail&id=$1
+RewriteRule bai-viet/chi-tiet-bv-([0-9]+)-([0-9]+).html$ ?mod=client&controller=ClientListPostByCatId&action=listPostByCatId&page=$1&id=$2
+RewriteRule bai-viet.html$ ?mod=client&controller=ClientListPostByCatId&action=listPostByCatId
